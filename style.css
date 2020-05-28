@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+  }
+  
+  header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(56, 9, 243);
+    clip-path: polygon(71% 0, 100% 0, 100% 100%, 93% 100%);
+  }
+  @keyframes anim-1 {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .nav {
+    position: absolute;
+    top: 75px;
+    left: -100%;
+    display: flex;
+    border-left: 5px solid #000;
+    padding-left: 20px;
+    transition: 0.5s;
+    animation: anim-2 0.8s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+  }
+  @keyframes anim-2 {
+    to {
+      left: 150px;
+      opacity: 1;
+    }
+  }
+  
+  .nav li {
+    list-style: none;
+  }
+  
+  .nav li a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .imgBox {
+    position: relative;
+    padding-right: 100px;
+    padding-top: 40px;
+  }
+  
+  .imgBox img {
+    max-width: 300px;
+    animation: anim-3 0.6s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+  }
+  @keyframes anim-3 {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .content {
+    position: relative;
+    padding: 100px 20px;
+    box-sizing: border-box;
+  }
+  
+  .content h2 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    animation: anim-3 0.6s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+  }
+  
+  .content p {
+    color: #000;
+    font-size: 1.1em;
+    animation: anim-4 0.9s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.9s;
+  }
+  
+  .content a {
+    position: relative;
+    display: inline-block;
+    background: #000;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 200px;
+    font-size: 0.95em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: anim-4 1s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+  }
+  
+  .social {
+    position: absolute;
+    bottom: 75px;
+    left: 150px;
+    display: flex;
+    animation: anim-4 1.1s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+  @keyframes anim-4 {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .social li {
+    list-style: none;
+  }
+  
+  .social li a {
+    color: #999;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 0.9em;
+  }
+  
+  .social li a:hover {
+    color: #fff;
+  }
